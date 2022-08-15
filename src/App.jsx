@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import Watch from "./components/Watch";
 import { gsap } from "gsap";
+import { random } from "./helpers/helper";
 
 function App() {
   const [stage, setStage] = useState(null);
+  const [theme, setTheme] = useState("forest");
 
   const refStage = useRef(null);
   useEffect(() => {
@@ -54,15 +56,22 @@ function App() {
     gsap.killTweensOf(fire)
     fire(m)
   }
+  const handleTheme = () => {
+
+    const temas = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"];
+
+    const change = temas[random(0, temas.length - 1)];
+    setTheme(change);
+  }
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-200" data-theme={theme}>
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">이 지 우</h1>
             <p className="py-6">
-              time left until your birthday
+              time left until your birthday 🎂
             </p>
             <Watch/>
           </div>
@@ -72,6 +81,9 @@ function App() {
         <g className="stage" onPointerUp={(e)=>handlepointer(e)} ref={refStage}>
           <rect width="100%" height="100%" fill="rgba(0,0,0,0)" stroke="none" />
         </g>
+        <g>
+        <text x="11" y="26" onClick={handleTheme} className="cursor-pointer">🍒</text>
+      </g>
       </svg>
     </>
   );
