@@ -44,7 +44,7 @@ function App() {
   }
 
   const m = {x:0, y:0};
-  
+
   window.onpointerdown = window.onpointermove = (e)=>{
     m.x = e.clientX
     m.y = e.clientY
