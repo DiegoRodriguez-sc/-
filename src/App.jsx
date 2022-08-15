@@ -4,8 +4,9 @@ import { gsap } from "gsap";
 import { random } from "./helpers/helper";
 
 function App() {
+  const themeDefault = localStorage.getItem("tema") || "forest";
   const [stage, setStage] = useState(null);
-  const [theme, setTheme] = useState("forest");
+  const [theme, setTheme] = useState(themeDefault);
 
   const refStage = useRef(null);
   useEffect(() => {
@@ -62,6 +63,7 @@ function App() {
 
     const change = temas[random(0, temas.length - 1)];
     setTheme(change);
+    localStorage.setItem("tema", change);
   }
 
   return (
@@ -82,7 +84,7 @@ function App() {
           <rect width="100%" height="100%" fill="rgba(0,0,0,0)" stroke="none" />
         </g>
         <g>
-        <text x="11" y="26" onClick={handleTheme} className="cursor-pointer">🍒</text>
+        <text x="10" y="30" onClick={handleTheme} className="cursor-pointer">🍒</text>
       </g>
       </svg>
     </>
