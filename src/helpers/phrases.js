@@ -9,7 +9,6 @@ export const vale = [
     "나는 너에게 내 영혼을 준다",//te entrego mi alma
     "나는 당신이 걸작을 주셔서 감사합니다, 너란 존재가 예술이니까",//Aprecio la obra maestra que eres porque solo tu existencia es arte
     "네가 웃으면 내 세상을 밝게 해 🎻", //cuando sories iluminas mi mundo
-    "¡Corre a por tus sueños! Si no los alcanzas, por lo menos haces deporte ⚽",
     "Bebe dormilona 👑!!!!",
     "Sorry, it's just that you are so beautiful that I forgot what I was going to say :)",
     "Hola señorita , 언제 한번 같이 저녁 드실래요?",
