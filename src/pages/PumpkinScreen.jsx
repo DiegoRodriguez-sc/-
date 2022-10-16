@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "../components/Halloween/pumpkin.css"
 import { vale } from "../helpers/phrases";
 
 const PumpkinScreen = () => {
   const ref = useRef(null);
+  const [frase, setfrase] = useState("");
   let slice = ['_one','_two','_three'];
 
 
@@ -45,6 +46,7 @@ const PumpkinScreen = () => {
         }
         if( c == 20) {
           clearInterval(run)
+          setfrase(vale[Math.floor(Math.random()*vale.length)]);
           if((calabazaeyes[calabazaeyes.length - 1] === calabazaeyes[calabazaeyes.length - 2]) 
           && (calabazanoses[calabazanoses.length - 1] === calabazanoses[calabazanoses.length - 2]) 
           && (calabazamouths[calabazamouths.length - 1] === calabazamouths[calabazamouths.length - 2])){
@@ -85,7 +87,7 @@ const PumpkinScreen = () => {
         <div className="modal-box relative">
           <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
           <h3 className="text-lg font-bold">Congratulations baby 지우!</h3>
-          <p className="py-4">{vale[Math.floor(Math.random()*vale.length)]}</p>
+          <p className="py-4">{frase}</p>
         </div>
       </div>
 
