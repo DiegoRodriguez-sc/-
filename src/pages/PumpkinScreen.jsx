@@ -64,7 +64,7 @@ const PumpkinScreen = () => {
 
   return (
     <>
-      
+      <h2 className="self-end mb-60 text-3xl font-bold">Touch the pumpkins</h2>
       <div id="pump" className="contPump">
         <div className="pumpkinp cursor-pointer" onClick={changePumpkin}>
           <div className="featurep"></div>
