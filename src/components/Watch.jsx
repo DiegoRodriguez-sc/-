@@ -24,7 +24,7 @@ const Watch = () => {
     <div className="App">
     <div className="flex gap-5">
       <div>
-        <span className="countdownCustom font-mono text-4xl">
+        <span className="countdownCustom font-mono text-4xl border-primary">
           <span style={{"--value":value.days}}></span>
         </span>
         days
