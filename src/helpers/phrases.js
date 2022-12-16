@@ -16,4 +16,7 @@ export const vale = [
     "You know what I'm thankful for today? For your existence. And for today not being Monday",
     "You are the most beautiful rose in my garden 🌼",
     "I would like to be a cat to spend seven lives with you 😆",
+    "Quédate a mi lado empezando desde mañana",
+    "같이 있어서 행복해",
+    "I only have a dream, a path to happiness, a reason for joy and you, a person to love"
 ]
