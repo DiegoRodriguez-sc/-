@@ -10,7 +10,7 @@ const NavButtons = ({handlePress}) => {
       location.reload();
     },
     Song: () => {
-      navigate("/song");
+      navigate("/song-christmas");
       location.reload();
     },
     Game: () => {
@@ -26,7 +26,7 @@ const NavButtons = ({handlePress}) => {
 
 
   const stopMusic = () =>{
-    navigate("/song")
+    navigate("/song-christmas")
     location.reload();
   }
 

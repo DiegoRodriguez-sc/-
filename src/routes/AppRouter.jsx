@@ -2,14 +2,11 @@ import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import CardTheme from '../components/CardTheme'
 import DashBoardChristmas from '../components/Christmas/DashBoardChristmas'
-import DashBoardHalloween from '../components/Halloween/DashBoardHalloween'
 import Navbar from '../components/Navbar'
 import NavButtons from '../components/NavButtons'
-import Choice from '../pages/Choice'
+import Choice from '../pages/ChoiceScreen'
 import GameSantaScreen from '../pages/GameSantaScreen'
-import PumpkinScreen from '../pages/PumpkinScreen'
-import SongScreen from '../pages/SongScreen'
-import TownScreen from '../pages/TownScreen'
+
 
 const AppRouter = () => {
 
@@ -63,7 +60,7 @@ const AppRouter = () => {
             <Navbar handlePress={handlePress}/>
             <Routes>
                   <Route path="/" element={<DashBoardChristmas/>}/>
-                  <Route path="/song" element={<Choice/> } />
+                  <Route path="/song-christmas" element={<Choice/> } />
                   <Route path="/game" element={<GameSantaScreen/>} />
             </Routes>
             <label htmlFor="my-drawer" id='press' className="hidden drawer-button"></label>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import SongScreen from './SongScreen';
 
-const Choice = () => {
+const ChoiceScreen = () => {
     const [musicScreen, setMusicScreen] = useState(false);
     const [songs, setsongs] = useState("");
     const [musicUpload, setmusicUpload] = useState(true);
@@ -34,10 +34,10 @@ const Choice = () => {
     }   
 
   return (
-    <div>
+    <div className='w-full'>
     {
         !musicScreen ?
-        <>
+        <div className='flex flex-col justify-center items-center'>
             <h1 className='text-4xl'>Choose your music</h1>
             <br />
             <button className='btn btn-outline btn-success' onClick={music}>Jingle Bell Rock</button>
@@ -54,15 +54,15 @@ const Choice = () => {
             <br />
             <button className='btn btn-outline btn-success' onClick={upload}>upload</button>
             <input type="file" id="upload" onChange={fileUpload} hidden />
-        </>
+        </div>
         :
-        <>
+        <div>
             <SongScreen song={songs} upload={uploadM} music={musicUpload}/>
-        </>
+        </div>
     }
       
-    </div>
+    </ div>
   )
 }
 
-export default Choice
+export default ChoiceScreen
