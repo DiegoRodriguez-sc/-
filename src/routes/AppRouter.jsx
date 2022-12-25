@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import CardTheme from '../components/CardTheme'
+import DashBoardChristmas from '../components/Christmas/DashBoardChristmas'
 import DashBoardHalloween from '../components/Halloween/DashBoardHalloween'
 import Navbar from '../components/Navbar'
 import NavButtons from '../components/NavButtons'
+import Choice from '../pages/Choice'
+import GameSantaScreen from '../pages/GameSantaScreen'
 import PumpkinScreen from '../pages/PumpkinScreen'
+import SongScreen from '../pages/SongScreen'
 import TownScreen from '../pages/TownScreen'
 
 const AppRouter = () => {
@@ -12,35 +16,35 @@ const AppRouter = () => {
   const themeDefault = localStorage.getItem("tema") || "forest";
   const [theme, setTheme] = useState(themeDefault);
   const temas = [
-    "light",
+    // "light",
     "dark",
-    "cupcake",
-    "bumblebee",
-    "emerald",
-    "corporate",
+    // "cupcake",
+    // "bumblebee",
+    // "emerald",
+    // "corporate",
     "synthwave",
     "retro",
-    "cyberpunk",
+    // "cyberpunk",
     "valentine",
     "halloween",
-    "garden",
+    // "garden",
     "forest",
     "aqua",
-    "lofi",
-    "pastel",
-    "fantasy",
-    "wireframe",
+    // "lofi",
+    // "pastel",
+    // "fantasy",
+    // "wireframe",
     "black",
     "luxury",
     "dracula",
-    "cmyk",
-    "autumn",
+    // "cmyk",
+    // "autumn",
     "business",
-    "acid",
-    "lemonade",
+    // "acid",
+    // "lemonade",
     "night",
     "coffee",
-    "winter",
+    // "winter",
   ];
 
   const handlePress = () => {
@@ -58,9 +62,9 @@ const AppRouter = () => {
           <div className="hero min-h-screen bg-base-200">
             <Navbar handlePress={handlePress}/>
             <Routes>
-                  <Route path="/" element={<DashBoardHalloween/>}/>
-                  <Route path="/town" element={<TownScreen/> } />
-                  <Route path="/pumpkin" element={<PumpkinScreen/>} />
+                  <Route path="/" element={<DashBoardChristmas/>}/>
+                  <Route path="/song" element={<Choice/> } />
+                  <Route path="/game" element={<GameSantaScreen/>} />
             </Routes>
             <label htmlFor="my-drawer" id='press' className="hidden drawer-button"></label>
           </div>

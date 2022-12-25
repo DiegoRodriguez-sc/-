@@ -7,12 +7,15 @@ const NavButtons = ({handlePress}) => {
   const r = {
     Home: () => {
       navigate("/");
+      location.reload();
     },
-    Town: () => {
-      navigate("/town");
+    Song: () => {
+      navigate("/song");
+      location.reload();
     },
-    PumpKin: () => {
-      navigate("/pumpkin");
+    Game: () => {
+      navigate("/game");
+      location.reload();
     },
   };
 
@@ -20,6 +23,12 @@ const NavButtons = ({handlePress}) => {
     r[e.target.textContent]();
     handlePress();
   };
+
+
+  const stopMusic = () =>{
+    navigate("/song")
+    location.reload();
+  }
 
   return (
     <>
@@ -30,8 +39,12 @@ const NavButtons = ({handlePress}) => {
         Town
       </button> */}
       <button className="btn m-2" onClick={redirectLink}>
-        PumpKin
+        Song
       </button>
+      {/* <button className="btn m-2" onClick={redirectLink}>
+        Game
+      </button> */}
+      <button className="btn glass" onClick={stopMusic}>music stop</button>
     </>
   );
 };
