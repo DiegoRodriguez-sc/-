@@ -61,8 +61,8 @@ const AppRouter = () => {
             <Navbar handlePress={handlePress}/>
             <Routes>
                   <Route path="/" element={<DashBoardChristmas/>}/>
-                  {/* <Route path="/song-christmas" element={<ChoiceScreen/> } /> */}
-                  <Route path='/song-c' element={<SongCScreen/>}/>
+                  <Route path="/song-christmas" element={<ChoiceScreen/> } />
+                  {/* <Route path='/song-c' element={<SongCScreen/>}/> */}
                   <Route path="/game" element={<GameSantaScreen/>} />
             </Routes>
             <label htmlFor="my-drawer" id='press' className="hidden drawer-button"></label>
