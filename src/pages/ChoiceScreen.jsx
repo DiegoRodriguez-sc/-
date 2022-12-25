@@ -34,7 +34,7 @@ const ChoiceScreen = () => {
     }   
 
   return (
-    <div className='w-full'>
+    <div className=''>
     {
         !musicScreen ?
         <div className='flex flex-col justify-center items-center'>
@@ -56,9 +56,9 @@ const ChoiceScreen = () => {
             <input type="file" id="upload" onChange={fileUpload} hidden />
         </div>
         :
-        <div>
+        <>
             <SongScreen song={songs} upload={uploadM} music={musicUpload}/>
-        </div>
+        </>
     }
       
     </ div>
