@@ -4,7 +4,7 @@ import CardTheme from '../components/CardTheme'
 import DashBoardChristmas from '../components/Christmas/DashBoardChristmas'
 import Navbar from '../components/Navbar'
 import NavButtons from '../components/NavButtons'
-import Choice from '../pages/ChoiceScreen'
+import ChoiceScreen from '../pages/ChoiceScreen'
 import GameSantaScreen from '../pages/GameSantaScreen'
 
 
@@ -60,7 +60,7 @@ const AppRouter = () => {
             <Navbar handlePress={handlePress}/>
             <Routes>
                   <Route path="/" element={<DashBoardChristmas/>}/>
-                  <Route path="/song-christmas" element={<Choice/> } />
+                  <Route path="/song-christmas" element={<ChoiceScreen/> } />
                   <Route path="/game" element={<GameSantaScreen/>} />
             </Routes>
             <label htmlFor="my-drawer" id='press' className="hidden drawer-button"></label>
