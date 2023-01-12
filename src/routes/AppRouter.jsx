@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import CardTheme from '../components/CardTheme'
 import DashBoardChristmas from '../components/Christmas/DashBoardChristmas'
+import DashBoardFinish from '../components/Dashboard/DashBoardFinish'
 import Navbar from '../components/Navbar'
 import NavButtons from '../components/NavButtons'
 import ChoiceScreen from '../pages/ChoiceScreen'
@@ -14,35 +15,35 @@ const AppRouter = () => {
   const themeDefault = localStorage.getItem("tema") || "forest";
   const [theme, setTheme] = useState(themeDefault);
   const temas = [
-    // "light",
+    "light",
     "dark",
-    // "cupcake",
-    // "bumblebee",
-    // "emerald",
-    // "corporate",
+    "cupcake",
+    "bumblebee",
+    "emerald",
+    "corporate",
     "synthwave",
     "retro",
-    // "cyberpunk",
+    "cyberpunk",
     "valentine",
     "halloween",
-    // "garden",
+    "garden",
     "forest",
     "aqua",
-    // "lofi",
-    // "pastel",
-    // "fantasy",
-    // "wireframe",
+    "lofi",
+    "pastel",
+    "fantasy",
+    "wireframe",
     "black",
     "luxury",
     "dracula",
-    // "cmyk",
-    // "autumn",
+    "cmyk",
+    "autumn",
     "business",
-    // "acid",
-    // "lemonade",
+    "acid",
+    "lemonade",
     "night",
     "coffee",
-    // "winter",
+    "winter",
   ];
 
   const handlePress = () => {
@@ -60,10 +61,10 @@ const AppRouter = () => {
           <div className="hero min-h-screen bg-base-200">
             <Navbar handlePress={handlePress}/>
             <Routes>
-                  <Route path="/" element={<DashBoardChristmas/>}/>
-                  <Route path="/song-christmas" element={<ChoiceScreen/> } />
+                  <Route path="/" element={<DashBoardFinish/>}/>
+                  {/* <Route path="/song-christmas" element={<ChoiceScreen/> } /> */}
                   {/* <Route path='/song-c' element={<SongCScreen/>}/> */}
-                  <Route path="/game" element={<GameSantaScreen/>} />
+                  {/* <Route path="/game" element={<GameSantaScreen/>} /> */}
             </Routes>
             <label htmlFor="my-drawer" id='press' className="hidden drawer-button"></label>
           </div>

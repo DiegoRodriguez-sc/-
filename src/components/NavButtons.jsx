@@ -38,13 +38,13 @@ const NavButtons = ({handlePress}) => {
       {/* <button className="btn m-2" onClick={redirectLink}>
         Town
       </button> */}
-      <button className="btn m-2" onClick={redirectLink}>
+      {/* <button className="btn m-2" onClick={redirectLink}>
         Song
-      </button>
+      </button> */}
       {/* <button className="btn m-2" onClick={redirectLink}>
         Game
       </button> */}
-      <button className="btn glass" onClick={stopMusic}>music stop</button>
+      {/* <button className="btn glass" onClick={stopMusic}>music stop</button> */}
     </>
   );
 };
