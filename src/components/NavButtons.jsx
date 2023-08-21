@@ -32,9 +32,9 @@ const NavButtons = ({handlePress}) => {
 
   return (
     <>
-      <button className="btn m-2" onClick={redirectLink}>
+      {/* <button className="btn m-2" onClick={redirectLink}>
         Home
-      </button>
+      </button> */}
       {/* <button className="btn m-2" onClick={redirectLink}>
         Town
       </button> */}

@@ -8,6 +8,7 @@ import NavButtons from '../components/NavButtons'
 import ChoiceScreen from '../pages/ChoiceScreen'
 import GameSantaScreen from '../pages/GameSantaScreen'
 import SongCScreen from '../pages/SongCScreen'
+import DashBoardCount from '../components/Dashboard/DashBoardCount'
 
 
 const AppRouter = () => {
@@ -59,9 +60,10 @@ const AppRouter = () => {
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <div className="hero min-h-screen bg-base-200">
-            <Navbar handlePress={handlePress}/>
+            {/* <Navbar handlePress={handlePress}/> */}
             <Routes>
-                  <Route path="/" element={<DashBoardFinish/>}/>
+                  <Route path="/" element={<DashBoardCount/>}/>
+                  {/* <Route path="/" element={<DashBoardFinish/>}/> */}
                   {/* <Route path="/song-christmas" element={<ChoiceScreen/> } /> */}
                   {/* <Route path='/song-c' element={<SongCScreen/>}/> */}
                   {/* <Route path="/game" element={<GameSantaScreen/>} /> */}
